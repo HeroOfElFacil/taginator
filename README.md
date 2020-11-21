@@ -15,7 +15,8 @@ Mróz Zuzanna, Podsiad Aleksander, Rożek Bartosz, Staroń Kacper, Szypuła Jaku
   - [NLTK](https://www.nltk.org/)
   - [TextBlob](https://textblob.readthedocs.io/en/dev/)
   - [Inne](https://sunscrapers.com/blog/8-best-python-natural-language-processing-nlp-libraries/)
-- ~~Api~~: 
+- ~~Api~~:
+  - Po omówieniu formuły projektu zrezygnowaliśmy API okazało się zbędne w naszym podejściu.
 - Gui:
   - [Kivy](https://kivy.org/#home)
   - [PySimpleGUI](https://pypi.org/project/PySimpleGUI/#data)
