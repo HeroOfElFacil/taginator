@@ -1,0 +1,50 @@
+Compsognathidae is a family of coelurosaurian theropod dinosaurs. Compsognathids were small carnivores, generally conservative in form, hailing from the Jurassic and Cretaceous Periods. The bird-like features of these species, along with other dinosaurs such as Archaeopteryx inspired the idea for the connection between dinosaur reptiles and modern-day avian species.[4] Compsognathid fossils preserve diverse integument — skin impressions are known from four genera commonly placed in the group, Compsognathus, Sinosauropteryx, Sinocalliopteryx, and Juravenator.[5] While the latter three show evidence of a covering of some of the earliest primitive feathers over much of the body, Juravenator and Compsognathus also show evidence of scales on the tail or hind legs.
+
+The first member of the group, Compsognathus, was discovered in 1861, after Johann A. Wagner published his description of the taxon.[6][7][8] The family was created by Edward Drinker Cope in 1875.[9] This classification was accepted by Othniel Charles Marsh in 1882, and added to the Coelurosauria clade by Friedrich von Huene in 1914 after additional fossils had been found.[6] With further discoveries, fossils have been uncovered across three different continents, in Asia,[10][6][7][8][5] Europe,[11] and South America.[7][9] Assignment to Compsognathidae is usually determined through examination of the metacarpal, which is used to separate Compsognathidae from other dinosaurs.[12] However, classification is still complicated due to similarities to the body of several other theropod dinosaurs, as well as the lack of unifying, diagnostic features that are shared by all compsognathids.[9][13]
+Contents
+
+    1 History of Discovery
+        1.1 Notable Specimens
+        1.2 Timeline
+    2 Description
+        2.1 Size
+        2.2 Feathers
+        2.3 Metacarpals
+    3 Palaeobiology
+        3.1 Diet
+    4 References
+
+History of Discovery
+The holotype of C. longiceps
+
+The first significant fossil specimen of Compsognathidae was found in the Bavaria region of Germany (BSP AS I 563) and given to collector Joseph Oberndorfer in 1859.[14] The finding was initially significant because of the small size of the specimen. In 1861, after an initial period of review, Johann A. Wagner presented his analysis of the specimen to the public and named the fossil Compsognathus longipes ("elegant jaw").[15] In 1868, Thomas Henry Huxley, an explorer known for his travels with Charles Darwin and an early supporter of the theory of evolution, used Compsognathus in a comparison to similar feathered dinosaur Archaeopteryx in order to propose the origin of birds. While Huxley noticed that these dinosaurs shared a similar layout to birds and proposed an exploration of the similarities. He is credited as being the first person to do so.[16] This initial comparison sparked the interest into the origin of birds and feathers. In 1882, Othniel Charles Marsh named a new family of dinosaurs for this species Compsognathidae and officially recognized the species as part of Dinosauria.[17]
+Notable Specimens
+Size comparison of the Juravenator specimen to human.
+
+In 1971, a second nearly complete specimen of Composgnathus longipes was found in the area of Canjuers, which is located in the southeast of France near Nice.[6] This specimen was much larger than the original German specimen, but similarities led to experts categorizing the fossil as an adult Compsognathus longipes and leading to the further classification of the German specimen as a juvenile.[18] This specimen also contained a lizard in the digestive region, further solidifying the theory that compsognothids consumed small vertebrate species.
+
+The holotype of Juravenator is the only known specimen of the species. Though Juravenator has previously been accepted as a member of Compsognathidae, recent research has led some experts to believe that Juravenator does not belong in this group. This is due to the fact that Juravenator could also be classified into a similar group within Coelurosauria, Maniraptoriformes. Maniraptoriforms share many similarities with compsognathids and due to the fact that there has been only one verified specimen of Juravenator, experts have disagreed on exactly where to place this genus. Since 2013, Juravenator is still commonly classified as a coelurosaur, but near the group Maniraptoriformes instead of Compsognathidae.[19]
+
+A compsognathid specimen consisting of a single finger bone has been described from Late Jurassic (Tithonian Age, about 150 million years ago) sediments at Port Waikato, New Zealand. It is the first and so far, only dinosaur specimen known from Jurassic New Zealand, as well as being the first New Zealand dinosaur fossil to have been found outside of the Cretaceous marine sediments at Mangahouanga Stream. Possible coprolites have been referred to this specimen, however it is still not an officially classified species.
+Timeline
+Description
+
+Compsognathids share a variety of characteristics. The genera in this family demonstrate traits that are characteristic of theropods, such as smaller forelimbs than hind legs. Size, feathers, and metacarpal size are among the most important classifying common characteristics.
+Size
+Comparison of German (green) and French (orange) Compsognathus longipes specimen
+
+Compsognathids are considered to be among the smallest dinosaurs ever discovered. Compsognathus longipes was formerly the smallest known dinosaur. It was around the size of a chicken when fully grown: around 1 m (3 ft 3 in) long and weighing 2.5 kg (5.5 lb).[20] However, recently discovered adult specimens of other dinosaurs are smaller than Compsognathus, including Caenagnathasia, Microraptor, and Parvicursor, all of which are estimated to be less than 1 m long.[21] However, most of these specimens are incomplete, so these sizes remain estimates.
+
+The other genera in this family are slightly larger than Compsognathus longipes, but generally similar in size. The largest compsognathid is Huaxiagnathus, which is estimated from its holotype to be around 1.8 m (5 ft 11 in) long,[22] while Sinocalliopteryx measures around 2.4 m (7 ft 10 in) long.[23] Sinosauropteryx is the most similar to Compsognathus, measuring at most 1.07 m (3 ft 6 in) long.[24]
+Feathers
+Artistic recreation of Sinosauropteryx with feathers
+
+Compsognathids had feathers. The phylogeny of Compsognathidae organizes this family near the development of feathers in dinosaurs. In 1998, evidence of filamentous protofeathers was presented in a study on Sinosauropteryx, marking the first time that any sort of feather structure was found outside of birds and their related species.[25] After this, more evidence of feather structure was found in other genera of Compsognathidae. Evidence of protofeathers bearing resemblance to Sinosauropteryx was found on Sinocalliopteryx specimens, including on the foot of the specimen.[26] There have been signs of basic feather structures on Juravenator, but evidence of this is still not definite. Samples of Juravenator skin show scales instead of feathers, leading into debates about Juravenator’s place within the family Compsognathidae.[27] However, a 2010 examination of Juravenator under UV light showed filaments similar to those seen on other compsognathid specimens, indicating that it is likely that these dinosaurs had some sort of feathering.[28]
+Metacarpals
+
+Another way of classification of Compsognathidae is shared metacarpal morphology. A 2007 study found similarities between compsognathid genera in certain metacarpal I morphologies. The conclusion of this study found that Composgnathidae had a distinct manual morphology where, like theropods, the first digit of the manus is larger than the other digits, but with a distinct metacarpal I morphology where the metacarpal is stocky and short. Compsognathidae also has a projection from the manus that is on this metacarpal.[12]
+Palaeobiology
+Diet
+
+Compsognathidae were carnivores and certain specimens have contained the remains of their diet. The German specimen of Compsognathus included remains in the digestive region, which was initially thought to be an unborn embryo.[29] However, further analysis found that the remains belong to a lizard with an elongated tail and stretched legs.[17][30] Other compsognathids, such as Sinosauropteryx, have been shown to eat lizards.[24]
+
