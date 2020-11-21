@@ -12,7 +12,7 @@ Mróz Zuzanna, Podsiad Aleksander, Rożek Bartosz, Staroń Kacper, Szypuła Jaku
 
 # Narzędzia:
 - Analiza tekstów:
-  - [NLTK](https://www.nltk.org/), 
+  - [NLTK](https://www.nltk.org/)
   - [TextBlob](https://textblob.readthedocs.io/en/dev/)
   - [Inne](https://sunscrapers.com/blog/8-best-python-natural-language-processing-nlp-libraries/)
 - ~~Api~~: 
