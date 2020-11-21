@@ -6,6 +6,6 @@ Repozytorium na kod do projektu Taginator, Projekt Interdyscyplinarny IiAD MiNI 
 - Osoby, strony, nazwy własne
 - Temat
 - Lista tagów z odnośnikami
-- Streszczenie całego spotkania (automatyczna analiza tekstu?)
+- Streszczenie całego spotkania (automatyczna analiza tekstu)
 - Materiały/Pliki (jeśli zostały dołączone)
 
