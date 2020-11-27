@@ -27,3 +27,8 @@ Mróz Zuzanna, Podsiad Aleksander, Rożek Bartosz, Staroń Kacper, Szypuła Jaku
 - Zapisu stanu:
   - pickle
 
+# Uruchamianie
+```
+python setup.py develop
+pip install .
+```
