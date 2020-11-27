@@ -18,6 +18,7 @@ def import_txt():
 
 def main():
     print("Hello")
+    import_txt()
 
 if __name__ == '__main__':
     main()
