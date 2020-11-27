@@ -1,1 +1,2 @@
-print("taginator")
+from . import example
+# print("taginator")
