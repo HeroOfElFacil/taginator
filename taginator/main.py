@@ -9,7 +9,7 @@ def import_txt():
         if file.endswith(".txt"):
             print(file) #filename
             try:
-                with open(file, 'r') as f:
+                with open(file, 'r', encoding = "utf-8") as f:
                     contents = f.read()
                     text.append(contents)
             except:
