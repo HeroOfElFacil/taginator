@@ -8,7 +8,6 @@ def main():
             path = input("Path: ")
             imp = importer.TxtImporter()
             imp.import_notes(path)
-            print(imp.get_notes())
         elif comm == "list":
             pass
         elif comm == "exit":
