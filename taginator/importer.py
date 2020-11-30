@@ -15,7 +15,7 @@ class Importer(ABC):
         pass
 
     def get_notes(self):
-        return self.text
+        return self.text.copy()
 
 
 class TxtImporter(Importer):
