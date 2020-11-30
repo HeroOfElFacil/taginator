@@ -1,6 +1,9 @@
 class Viewer():
-    def viewListed(self, files):
+    def view_listed(self, files, extractors):
         print(len(files), "imported files found")
-        for name, ext in files:
-            print(name)
+        for name, note in files.items():
+            print("\t", name)
+            for extractor in extractors:
+                print("\t\t", extractor.get_name(), ":")
+                print("\t\t\t", ",".join(extractor.extract(note)))
 
