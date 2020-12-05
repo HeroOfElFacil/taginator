@@ -11,6 +11,10 @@ def main():
             tag_service.import_notes(path)
         elif comm == "list":
             tag_service.list_notes()
+            
+        elif comm == "show":
+            file_name = input("Note name: ")
+            tag_service.show_notes(file_name)
 
         elif comm == "exit":
             break
