@@ -12,15 +12,17 @@ class Viewer():
     def show_file(self, files, file_name):
         if file_name == "all":
             for name, note in files.items():
-                print("\n", name)
-                print("\n", note.text)
+                self.show_file(files, name)
+
         else:
-            try:
-                for name, note in files.items():
-                    if os.path.splitext(name)[0] == file_name:
-                        print("\n", name)
-                        print("\n", note.text)
-            except:
+            if file_name in files:
+                note = files[file_name]
+                print("\n", file_name)
+                print("\n", note.text)
+                for key, value in note.extracted_values.items():
+                    print("\n\t", key, ":")
+                    print("\t\t", ",".join(value))
+            else:
                 print("Note not found")
 
 

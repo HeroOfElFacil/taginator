@@ -33,7 +33,7 @@ class TxtImporter(Importer):
                 try:
                     with open(os.path.join(self.path, file), 'r', encoding="utf-8") as f:
                         content = f.read()
-                        self.text[file] = note.Note(file, self, content)
+                        self.text[os.path.splitext(file)[0]] = note.Note(file, self, content)
                 except Exception as e:
                     print(e)
         print("Done!")
