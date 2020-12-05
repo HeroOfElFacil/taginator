@@ -22,4 +22,6 @@ class Taginator():
             for name, note in dict.items():
                 note.set_extracted_values(extractor.get_name(), extractor.extract(note))
         return dict
-
+    
+    def show_notes(self, file_name):
+        self.viewer.show_file(self.notes, file_name)
