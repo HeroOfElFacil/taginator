@@ -1,4 +1,4 @@
-from . import importer, viewer, extractor
+from . import importer, viewer, extractor, helper
 
 class Taginator():
     def __init__(self):
@@ -6,6 +6,7 @@ class Taginator():
         self.viewer = viewer.Viewer()
         self.notes = {}
         self.extractors = [extractor.DateExtractor()]
+        self.helper = helper.Helper()
 
     def list_notes(self):
         self.viewer.view_listed(self.notes)
@@ -25,3 +26,6 @@ class Taginator():
     
     def show_notes(self, file_name):
         self.viewer.show_file(self.notes, file_name)
+
+    def help_me(self, command):
+        self.helper.help(command)
