@@ -1,3 +1,5 @@
+import os
+
 class Viewer():
     def view_listed(self, files):
         print(len(files), "imported files found")
