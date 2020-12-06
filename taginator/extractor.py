@@ -3,6 +3,7 @@ from nltk.tag import pos_tag
 from datetime import datetime
 import datefinder
 
+
 class Extractor(ABC):
     @abstractmethod
     def extract(self, note):

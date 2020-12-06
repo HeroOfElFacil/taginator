@@ -5,7 +5,7 @@ class Taginator():
         self.importers = []
         self.viewer = viewer.Viewer()
         self.notes = {}
-        self.extractors = [extractor.DateExtractor()]
+        self.extractors = [extractor.DateExtractor(), extractor.NameExtractor()]
         self.helper = helper.Helper()
 
     def list_notes(self):
