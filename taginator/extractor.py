@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from nltk.tag import pos_tag
 from datetime import datetime
 import datefinder
 
@@ -30,3 +31,19 @@ class DateExtractor(Extractor):
             return False
         return True
 
+class NameExtractor(Extractor):
+
+    def extract(self, note):
+        try:
+            matches = pos_tag(note.text.split())
+            return [match[0] for match in matches if self.__filter(match[0], match[1])]
+        except:
+            return []
+
+    def get_name(self):
+        return "names"
+
+    def __filter(self, word, wordType):
+        if wordType != 'NNP':
+            return False
+        return True
