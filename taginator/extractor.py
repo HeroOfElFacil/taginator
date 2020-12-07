@@ -1,4 +1,6 @@
 from abc import ABC, abstractmethod
+import nltk
+nltk.download('averaged_perceptron_tagger', quiet=True)
 from nltk.tag import pos_tag
 from datetime import datetime
 import datefinder
