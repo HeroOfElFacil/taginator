@@ -3,6 +3,7 @@ import nltk
 nltk.download('averaged_perceptron_tagger', quiet=True)
 from nltk.tag import pos_tag
 from datetime import datetime
+from gensim.summarization import keywords
 import datefinder
 
 
@@ -50,3 +51,11 @@ class NameExtractor(Extractor):
         if wordType != 'NNP':
             return False
         return True
+
+class TagExtractor(Extractor):
+
+    def get_name(self):
+        return "tag"
+
+    def extract(self, note):
+        return keywords(note.text).split('\n')
