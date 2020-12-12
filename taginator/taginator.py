@@ -25,10 +25,14 @@ class Taginator():
                 note.set_extracted_values(extractor.get_name(), extractor.extract(note))
         for name, note in dict.items():
             note.add_tags(self.tagextractor.extract(note))
+            note.add_tokens()
         return dict
     
     def show_notes(self, file_name):
         self.viewer.show_file(self.notes, file_name)
+        
+    def find_context(self, file_name, keyword):
+        self.viewer.show_context(self.notes, file_name, keyword)
 
     def help_me(self, command):
         self.helper.help(command)
