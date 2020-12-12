@@ -41,7 +41,7 @@ class NameExtractor(Extractor):
     def extract(self, note):
         try:
             matches = pos_tag(note.text.split())
-            return [match[0] for match in matches if self.__filter(match[0], match[1])]
+            return list(set([match[0] for match in matches if self.__filter(match[0], match[1])]))
         except:
             return []
 
@@ -59,4 +59,11 @@ class TagExtractor(Extractor):
         return "tag"
 
     def extract(self, note):
-        return keywords(note.text).split('\n')
+        tag_list = keywords(note.text).split('\n')
+        ret_list = []
+        for tag in tag_list:
+            tmp = tag.split(' ')
+            for s in tmp:
+                ret_list.append(s)
+        ret_list = list(set(ret_list))
+        return ret_list
