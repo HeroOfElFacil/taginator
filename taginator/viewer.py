@@ -1,6 +1,9 @@
 import os
 
 class Viewer():
+    def __init__(self):
+        self.flag = False
+
     def view_listed(self, files):
         print(len(files), "imported files found")
         for name, note in files.items():
@@ -33,9 +36,17 @@ class Viewer():
         if file_name in files:
             note = files[file_name]
             for token in note.tokens:
-                if " " + keyword in token:
-                    print("\nkeyword: ", keyword)
-                    print("context:", token)
+                if " " + keyword.lower() in token.lower():
+                    if self.flag: print("File: " + file_name)
+                    print("keyword: ", keyword)
+                    print("context:", token, "\n")
+        elif file_name == "all":
+            for name, note in files.items():
+                self.flag = True
+                self.show_context(files, name, keyword)
+                self.flag = False
+
+
         else:
             print("Note not found")           
 
