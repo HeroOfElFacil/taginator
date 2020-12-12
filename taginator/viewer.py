@@ -33,7 +33,7 @@ class Viewer():
         if file_name in files:
             note = files[file_name]
             for token in note.tokens:
-                if keyword in token:
+                if " " + keyword in token:
                     print("\nkeyword: ", keyword)
                     print("context:", token)
         else:
