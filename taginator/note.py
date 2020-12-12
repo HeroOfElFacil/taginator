@@ -1,3 +1,5 @@
+import nltk
+
 class Note():
     def __init__(self, name, importer, text):
         self.name = name
@@ -11,3 +13,6 @@ class Note():
 
     def add_tags(self, tags):
         self.tags.extend(tags)
+     
+    def add_tokens(self):
+        self.tokens = nltk.sent_tokenize(self.text)
