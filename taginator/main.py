@@ -27,6 +27,10 @@ def main():
                 else:
                     break
 
+        elif comm == "search":
+            comm2 = input("[tag/phrase]: ")
+            tag_service.search(comm2)
+
         elif comm.startswith("help"):
             tag_service.help_me(comm)
 

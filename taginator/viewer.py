@@ -1,5 +1,6 @@
 import os
 
+
 class Viewer():
     def __init__(self):
         self.flag = False
@@ -13,7 +14,7 @@ class Viewer():
                 print("\t\t", ",".join(value))
             print("\tTags:")
             print("\t\t", ",".join(note.tags))
-       
+
     def show_file(self, files, file_name):
         if file_name == "all":
             for name, note in files.items():
@@ -46,7 +47,23 @@ class Viewer():
                 self.show_context(files, name, keyword)
                 self.flag = False
 
-
         else:
-            print("Note not found")           
+            print("Note not found")
 
+    def search_notes(self, files, tagOrPhrase):
+        if tagOrPhrase == "tag" or tagOrPhrase == "t":
+            searchFor = input("tag: ")
+            searchFor = searchFor.strip()
+            print("\nNotes matching tag: \'" + searchFor + "\'\n")
+            searchFlag = False
+            for name, note in files.items():
+                if searchFor.lower() in note.tags:
+                    searchFlag = True
+                    self.show_file(files, name)
+            if not searchFlag:
+                print("No notes matching tag: \'"+searchFor+"\' found!\n")
+
+        elif tagOrPhrase == "phrase" or tagOrPhrase == "p":
+            print("Sorry! This function isn't implemented yet.")
+        else:
+            print("Invalid command")

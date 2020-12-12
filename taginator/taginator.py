@@ -34,5 +34,8 @@ class Taginator():
     def find_context(self, file_name, keyword):
         self.viewer.show_context(self.notes, file_name, keyword)
 
+    def search(self, tagOrPhrase):
+        self.viewer.search_notes(self.notes, tagOrPhrase)
+
     def help_me(self, command):
         self.helper.help(command)
