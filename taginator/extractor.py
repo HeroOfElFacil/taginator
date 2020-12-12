@@ -65,5 +65,12 @@ class TagExtractor(Extractor):
             tmp = tag.split(' ')
             for s in tmp:
                 ret_list.append(s)
+                if s[-1] == 's':
+                    if s[-3:-1] == 'ie':
+                        sing = s[:-3] + 'y'
+                        ret_list.append(sing)
+                    else:
+                        sing = s[:-1]
+                        ret_list.append(sing)
         ret_list = list(set(ret_list))
         return ret_list
