@@ -29,4 +29,13 @@ class Viewer():
             else:
                 print("Note not found")
 
+    def show_context(self, files, file_name, keyword):
+        if file_name in files:
+            note = files[file_name]
+            for token in note.tokens:
+                if " ".join(keyword) in token:
+                    print("\nkeyword: ", keyword)
+                    print("context:", token)
+        else:
+            print("Note not found")           
 
