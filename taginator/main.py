@@ -16,6 +16,16 @@ def main():
         elif comm == "show":
             file_name = input("Note name: ")
             tag_service.show_notes(file_name)
+            while(True):
+                cond = input("\nInspect  [y/n]: ")
+                if cond == "y":
+                    keyword = input("Enter phrase: ")
+                    if keyword == "":
+                        print("Nothing here!")
+                        break
+                    tag_service.find_context(file_name, keyword)
+                else:
+                    break
 
         elif comm.startswith("help"):
             tag_service.help_me(comm)
