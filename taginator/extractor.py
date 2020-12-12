@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 import nltk
 nltk.download('averaged_perceptron_tagger', quiet=True)
+nltk.download('punkt', quiet=True)
 from nltk.tag import pos_tag
 from datetime import datetime
 from gensim.summarization import keywords
