@@ -4,6 +4,10 @@ class Note():
         self.importer = importer
         self.text = text
         self.extracted_values = {}
+        self.tags = []
 
     def set_extracted_values(self, key, value):
         self.extracted_values[key] = value
+
+    def add_tags(self, tags):
+        self.tags.extend(tags)

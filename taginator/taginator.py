@@ -7,6 +7,7 @@ class Taginator():
         self.notes = {}
         self.extractors = [extractor.DateExtractor(), extractor.NameExtractor()]
         self.helper = helper.Helper()
+        self.tagextractor = extractor.TagExtractor()
 
     def list_notes(self):
         self.viewer.view_listed(self.notes)
@@ -22,6 +23,8 @@ class Taginator():
         for extractor in self.extractors:
             for name, note in dict.items():
                 note.set_extracted_values(extractor.get_name(), extractor.extract(note))
+        for name, note in dict.items():
+            note.add_tags(self.tagextractor.extract(note))
         return dict
     
     def show_notes(self, file_name):
