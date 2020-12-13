@@ -8,7 +8,7 @@ class Viewer():
     def view_listed(self, files):
         print(len(files), "imported files found")
         for name, note in files.items():
-            print(name)
+            print("\n\n"+name)
             for key, value in note.extracted_values.items():
                 print("\t", key, ":")
                 print("\t\t", ",".join(value))
@@ -23,7 +23,7 @@ class Viewer():
         else:
             if file_name in files:
                 note = files[file_name]
-                print("\n", file_name)
+                print("\n\n\n", file_name)
                 print("\n", note.text)
                 for key, value in note.extracted_values.items():
                     print("\t", key, ":")
