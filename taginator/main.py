@@ -32,6 +32,10 @@ def main():
             comm2 = input("[tag/phrase]: ")
             tag_service.search(comm2)
 
+        elif comm == "summary":
+            file_name = input("Note name: ")
+            tag_service.summary(file_name)
+
         elif comm.startswith("help"):
             tag_service.help_me(comm)
 

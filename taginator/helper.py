@@ -1,7 +1,7 @@
 class Helper():
     def help(self, command):
         if command == "help":
-            print("Available commands:\n\n\thelp\n\timport\n\tshow\n\tlist\n\tsearch\n\texit\n\nInput \'help [command]\' to learn more about each command.")
+            print("Available commands:\n\n\thelp\n\timport\n\tshow\n\tlist\n\tsearch\n\tsummary\n\texit\n\nInput \'help [command]\' to learn more about each command.")
         elif command == "help import":
             print("\n\t\'import\' first prompts the user for a file path and then imports text files from the indicated folder and automatically processes them. "
                   "Both local and global file paths work. To import from current folder leave empty.\n")
@@ -16,5 +16,7 @@ class Helper():
             print("\n\t\'exit\' closes Taginator.\n")
         elif command == "help help":
             print("\n\tFunny\n")
+        elif command == "help summary":
+            print("\n\t\'summary\' first prompts the user for a file name of an imported note and then shows its summary. ")
         else:
             print("Command not found")

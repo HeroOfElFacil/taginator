@@ -5,6 +5,7 @@ class Note():
         self.name = name
         self.importer = importer
         self.text = text
+        self.summary = ""
         self.extracted_values = {}
         self.tags = []
 
@@ -16,3 +17,6 @@ class Note():
      
     def add_tokens(self):
         self.tokens = nltk.sent_tokenize(self.text)
+
+    def change_summary(self, summary):
+        self.summary = summary

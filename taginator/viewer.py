@@ -67,3 +67,8 @@ class Viewer():
             print("Sorry! This function isn't implemented yet.")
         else:
             print("Invalid command")
+
+    def show_summary(self, files):
+        for name, note in files.items():
+            print("\nFile: " + name)
+            print("Summary: " + note.summary)

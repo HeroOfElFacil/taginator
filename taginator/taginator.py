@@ -8,6 +8,7 @@ class Taginator():
         self.extractors = [extractor.DateExtractor(), extractor.NameExtractor()]
         self.helper = helper.Helper()
         self.tagextractor = extractor.TagExtractor()
+        self.summarizer = extractor.SummaryExtractor()
 
     def list_notes(self):
         self.viewer.view_listed(self.notes)
@@ -26,6 +27,7 @@ class Taginator():
         for name, note in dict.items():
             note.add_tags(self.tagextractor.extract(note))
             note.add_tokens()
+            note.change_summary(self.summarizer.extract(note))
         return dict
     
     def show_notes(self, file_name):
@@ -36,6 +38,9 @@ class Taginator():
 
     def search(self, tagOrPhrase):
         self.viewer.search_notes(self.notes, tagOrPhrase)
+
+    def summary(self, file_name):
+        self.viewer.show_summary(self.notes if file_name == "all" else {file_name: self.notes[file_name]})
 
     def help_me(self, command):
         self.helper.help(command)

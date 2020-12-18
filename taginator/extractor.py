@@ -5,6 +5,7 @@ nltk.download('punkt', quiet=True)
 from nltk.tag import pos_tag
 from datetime import datetime
 from gensim.summarization import keywords
+from gensim.summarization.summarizer import summarize
 import datefinder
 
 
@@ -74,3 +75,11 @@ class TagExtractor(Extractor):
                         ret_list.append(sing)
         ret_list = list(set(ret_list))
         return ret_list
+
+class SummaryExtractor(Extractor):
+
+    def get_name(self):
+        return "summary"
+
+    def extract(self, note):
+        return summarize(note.text)
