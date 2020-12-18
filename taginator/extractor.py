@@ -37,6 +37,13 @@ class DateExtractor(Extractor):
             return False
         return True
 
+    def extract_datetime(self, note):
+        try:
+            matches = datefinder.find_dates(note.text, source=True, base_date=datetime(1, 1, 1, 0, 0, 0))
+            return {match[0]:match[1] for match in matches if self.__filter(match[0], match[1])}
+        except:
+            return []
+
 class NameExtractor(Extractor):
 
     def extract(self, note):

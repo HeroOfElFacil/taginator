@@ -21,9 +21,11 @@ class Taginator():
         self.importers.append(imp)
 
     def __process_notes(self, dict):
-        for extractor in self.extractors:
+        for ext in self.extractors:
             for name, note in dict.items():
-                note.set_extracted_values(extractor.get_name(), extractor.extract(note))
+                note.set_extracted_values(ext.get_name(), ext.extract(note))
+                if isinstance(ext, extractor.DateExtractor):
+                    note.normalized_dates = ext.extract_datetime(note)
         for name, note in dict.items():
             note.add_tags(self.tagextractor.extract(note))
             note.add_tokens()

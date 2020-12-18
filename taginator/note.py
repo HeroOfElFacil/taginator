@@ -7,6 +7,7 @@ class Note():
         self.text = text
         self.summary = ""
         self.extracted_values = {}
+        self.normalized_dates = {}
         self.tags = []
 
     def set_extracted_values(self, key, value):
