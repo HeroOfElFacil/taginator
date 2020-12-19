@@ -62,9 +62,9 @@ class Viewer():
         else:
             print("Note not found")
 
-    def search_notes(self, files, tagOrPhrase):
+    def search_notes(self, files, what):
         files = self.sort_by_sortflag(files, self.sortflag)
-        if tagOrPhrase == "tag" or tagOrPhrase == "t":
+        if what == "tag" or what == "t":
             searchFor = input("tag: ")
             searchFor = searchFor.strip()
             print("\nNotes matching tag: \'" + searchFor + "\'\n")
@@ -76,8 +76,22 @@ class Viewer():
             if not searchFlag:
                 print("No notes matching tag: \'"+searchFor+"\' found!\n")
 
-        elif tagOrPhrase == "phrase" or tagOrPhrase == "p":
+        elif what == "phrase" or what == "p":
             print("Sorry! This function isn't implemented yet.")
+
+        elif what == "date" or what == "d":
+            searchFor = input("date: ")
+            DEFAULT = datetime(1, 1, 1, 0, 0, 0)
+            date_normalized = parser.parse(searchFor, default = DEFAULT)
+            print("\nNotes matching date: \'" + searchFor + "\'\n")
+            searchFlag = False
+            for name, note in files.items():
+                if date_normalized in note.normalized_dates:
+                    searchFlag = True
+                    self.show_file(files, name)
+            if not searchFlag:
+                print("No notes matching date: \'" + searchFor + "\' found!\n")
+
         else:
             print("Invalid command")
 
