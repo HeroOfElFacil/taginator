@@ -29,7 +29,7 @@ def main():
                         break
 
         elif comm == "search":
-            comm2 = input("[tag/phrase]: ")
+            comm2 = input("[tag/phrase/date]: ")
             tag_service.search(comm2)
 
         elif comm == "summary":
