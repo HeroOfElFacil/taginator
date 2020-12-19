@@ -11,7 +11,7 @@ class Helper():
         elif command == "help list":
             print("\n\t\'list\' lists all currently imported files and their automatically generated tags.\n")
         elif command == "help search":
-            print("\n\t\'search\' first prompts the user to choose if they want to search by tag (notes with exact tag match) or by phrase (notes with content containing matching phrase), then prompts them again for the tag/phrase to search for and finally shows all currently imported notes with matching tag/phrase.\n")
+            print("\n\t\'search\' first prompts the user to choose if they want to search by tag (notes with exact tag match), by phrase (notes with content containing matching phrase) or by date (notes with content containing matching date fragment/whole date), then prompts them again for the tag/phrase/date to search for and finally shows all currently imported notes with matching tag/phrase/date.\n")
         elif command == "help exit":
             print("\n\t\'exit\' closes Taginator.\n")
         elif command == "help help":
