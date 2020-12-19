@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 import os
+import datetime
 from . import note
 
 class Importer(ABC):
@@ -31,11 +32,13 @@ class TxtImporter(Importer):
             if file.endswith(".txt"):
                 print(file)  # filename
                 try:
+                    filedate = datetime.datetime.fromtimestamp(os.path.getmtime(os.path.join(self.path, file)))
                     with open(os.path.join(self.path, file), 'r', encoding="utf-8") as f:
-                        content = f.read()
-                        self.text[os.path.splitext(file)[0]] = note.Note(file, self, content)
+                        content = f.read().strip()
+                        self.text[os.path.splitext(file)[0]] = note.Note(file, self, content, filedate)
                 except Exception as e:
                     print(e)
+
         print("Done!")
 
     def get_info(self):

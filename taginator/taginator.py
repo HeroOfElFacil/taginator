@@ -46,3 +46,6 @@ class Taginator():
 
     def help_me(self, command):
         self.helper.help(command)
+
+    def set_sortflag(self, flag):
+        self.viewer.sortflag = flag

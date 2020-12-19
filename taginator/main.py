@@ -39,6 +39,15 @@ def main():
         elif comm.startswith("help"):
             tag_service.help_me(comm)
 
+        elif comm == "sort":
+            print("Choose order to sort by.")
+            order = input("[import/chrono/antichrono]: ")
+            if not (order=="import" or order=="chrono" or order=="antichrono"):
+                print("Invalid order!")
+            else:
+                tag_service.set_sortflag(order)
+                print("Sorted by ["+order+"]")
+
         elif comm == "exit":
             break
         else:
