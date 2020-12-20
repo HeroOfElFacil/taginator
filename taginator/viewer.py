@@ -78,7 +78,16 @@ class Viewer():
                 print("No notes matching tag: \'"+searchFor+"\' found!\n")
 
         elif what == "phrase" or what == "p":
-            print("Sorry! This function isn't implemented yet.")
+            searchFor = input("phrase: ")
+            searchFor = searchFor.strip()
+            print("\nNotes matching phrase: \'" + searchFor + "\'\n")
+            searchFlag = False
+            for name, note in files.items():
+                if searchFor.lower() in note.text.lower():
+                    searchFlag = True
+                    self.show_file(files, name)
+            if not searchFlag:
+                print("No notes matching phrase: \'" + searchFor + "\' found!\n")
 
         elif what == "date" or what == "d":
             searchFor = input("date: ")
@@ -92,6 +101,10 @@ class Viewer():
                     self.show_file(files, name)
             if not searchFlag:
                 print("No notes matching date: \'" + searchFor + "\' found!\n")
+
+
+        elif what == "":
+            print("\n")
 
         else:
             print("Invalid command")
