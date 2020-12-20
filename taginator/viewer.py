@@ -68,26 +68,36 @@ class Viewer():
         if what == "tag" or what == "t":
             searchFor = input("tag: ")
             searchFor = searchFor.strip()
-            print("\nNotes matching tag: \'" + searchFor + "\'\n")
+            searchList = searchFor.split("|")
+            print("\nNotes matching tags: \'" + searchFor + "\'\n")
             searchFlag = False
             for name, note in files.items():
-                if searchFor.lower() in note.tags:
-                    searchFlag = True
+                searchIter = 0
+                for token in searchList:
+                    if token.strip().lower() in note.tags:
+                        searchIter += 1
+                if searchIter == len(searchList):
                     self.show_file(files, name)
+                    searchFlag = True
             if not searchFlag:
-                print("No notes matching tag: \'"+searchFor+"\' found!\n")
+                print("No notes matching tags: \'"+searchFor+"\' found!\n")
 
         elif what == "phrase" or what == "p":
             searchFor = input("phrase: ")
             searchFor = searchFor.strip()
-            print("\nNotes matching phrase: \'" + searchFor + "\'\n")
+            searchList = searchFor.split("|")
+            print("\nNotes matching phrases: \'" + searchFor + "\'\n")
             searchFlag = False
             for name, note in files.items():
-                if searchFor.lower() in note.text.lower():
-                    searchFlag = True
+                searchIter = 0
+                for token in searchList:
+                    if token.strip().lower() in note.text.lower():
+                        searchIter += 1
+                if searchIter == len(searchList):
                     self.show_file(files, name)
+                    searchFlag = True
             if not searchFlag:
-                print("No notes matching phrase: \'" + searchFor + "\' found!\n")
+                print("No notes matching phrases: \'" + searchFor + "\' found!\n")
 
         elif what == "date" or what == "d":
             searchFor = input("date: ")
