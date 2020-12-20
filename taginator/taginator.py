@@ -38,8 +38,11 @@ class Taginator():
     def find_context(self, file_name, keyword):
         self.viewer.show_context(self.notes, file_name, keyword)
 
-    def search(self, tagOrPhrase):
-        self.viewer.search_notes(self.notes, tagOrPhrase)
+    def search(self, tagOrPhrase, scope):
+        self.viewer.search_notes(self.notes, tagOrPhrase, scope)
+
+    def filter(self, tagOrPhrase):
+        return self.viewer.filter_notes(self.notes, tagOrPhrase)
 
     def summary(self, file_name):
         self.viewer.show_summary(self.notes if file_name == "all" else {file_name: self.notes[file_name]})

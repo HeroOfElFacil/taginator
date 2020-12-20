@@ -63,7 +63,17 @@ class Viewer():
         else:
             print("Note not found")
 
-    def search_notes(self, files, what):
+
+    def searchPrint(self, scope, name, note, files, token, searchList):
+        if(scope=="context"):
+            print("\n\n"+name+"\n"+note.filedate.strftime("%Y/%m/%d %H:%m:%S")+"\n")
+            for token in searchList:
+                self.show_context(files, name, token)
+        else:
+            self.show_file(files, name)
+
+    
+    def search_notes(self, files, what, scope):
         files = self.sort_by_sortflag(files, self.sortflag)
         if what == "tag" or what == "t":
             searchFor = input("tag: ")
@@ -77,7 +87,7 @@ class Viewer():
                     if token.strip().lower() in note.tags:
                         searchIter += 1
                 if searchIter == len(searchList):
-                    self.show_file(files, name)
+                    self.searchPrint(scope, name, note, files, token, searchList)
                     searchFlag = True
             if not searchFlag:
                 print("No notes matching tags: \'"+searchFor+"\' found!\n")
@@ -94,7 +104,7 @@ class Viewer():
                     if token.strip().lower() in note.text.lower():
                         searchIter += 1
                 if searchIter == len(searchList):
-                    self.show_file(files, name)
+                    self.searchPrint(scope, name, note, files, token, searchList)
                     searchFlag = True
             if not searchFlag:
                 print("No notes matching phrases: \'" + searchFor + "\' found!\n")
@@ -108,16 +118,77 @@ class Viewer():
             for name, note in files.items():
                 if date_normalized in note.normalized_dates:
                     searchFlag = True
-                    self.show_file(files, name)
+                    dateInText = note.normalized_dates[date_normalized]
+                    self.searchPrint(scope, name, note, files, dateInText, [dateInText])
             if not searchFlag:
                 print("No notes matching date: \'" + searchFor + "\' found!\n")
-
 
         elif what == "":
             print("\n")
 
         else:
             print("Invalid command")
+
+    def filter_notes(self, files, what):
+        files = self.sort_by_sortflag(files, self.sortflag)
+        filteredList = []
+        if what == "tag" or what == "t":
+            searchFor = input("tag: ")
+            searchFor = searchFor.strip()
+            searchList = searchFor.split("|")
+            print("\nNotes matching tags: \'" + searchFor + "\'\n")
+            searchFlag = False
+            for name, note in files.items():
+                searchIter = 0
+                for token in searchList:
+                    if token.strip().lower() in note.tags:
+                        searchIter += 1
+                if searchIter == len(searchList):
+                    filteredList.append(name)
+                    searchFlag = True
+            if not searchFlag:
+                print("No notes matching tags: \'"+searchFor+"\' found!\n")
+
+        elif what == "phrase" or what == "p":
+            searchFor = input("phrase: ")
+            searchFor = searchFor.strip()
+            searchList = searchFor.split("|")
+            print("\nNotes matching phrases: \'" + searchFor + "\'\n")
+            searchFlag = False
+            for name, note in files.items():
+                searchIter = 0
+                for token in searchList:
+                    if token.strip().lower() in note.text.lower():
+                        searchIter += 1
+                if searchIter == len(searchList):
+                    filteredList.append(name)
+                    searchFlag = True
+            if not searchFlag:
+                print("No notes matching phrases: \'" + searchFor + "\' found!\n")
+
+        elif what == "date" or what == "d":
+            searchFor = input("date: ")
+            DEFAULT = datetime(1, 1, 1, 0, 0, 0)
+            date_normalized = parser.parse(searchFor, default = DEFAULT)
+            print("\nNotes matching date: \'" + searchFor + "\'\n")
+            searchFlag = False
+            for name, note in files.items():
+                if date_normalized in note.normalized_dates:
+                    searchFlag = True
+                    filteredList.append(name)
+            if not searchFlag:
+                print("No notes matching date: \'" + searchFor + "\' found!\n")
+
+        elif what == "":
+            print("\n")
+
+        else:
+            print("Invalid command")
+
+        if len(filteredList) > 0:
+            for name in filteredList:
+                print(name)
+        return filteredList
 
     def show_summary(self, files):
         files = self.sort_by_sortflag(files, self.sortflag)
