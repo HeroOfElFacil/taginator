@@ -43,7 +43,7 @@ def main():
                 while(True):
                     cond = input("\nFurther action?  [context/summary/show/exit]: ")
                     if cond == "context":
-                        keyword = input("Enter tag: ")
+                        keyword = input("Enter keyword: ")
                         if keyword == "":
                             print("Nothing here!")
                             break
@@ -55,7 +55,6 @@ def main():
                             tag_service.show_notes(name)
                     elif cond == "summary":
                         for name in filteredList:
-                            print("\n\n" + name+":\n")
                             tag_service.summary(name)
                     else:
                         break

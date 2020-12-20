@@ -47,6 +47,7 @@ class Viewer():
 
     def show_context(self, files, file_name, keyword):
         files = self.sort_by_sortflag(files, self.sortflag)
+        presentFlag = False
         if file_name in files:
             note = files[file_name]
             for token in note.tokens:
@@ -54,6 +55,9 @@ class Viewer():
                     if self.flag: print("File: " + file_name)
                     print("keyword: ", keyword)
                     print("context:", token, "\n")
+                    presentFlag = True
+            if presentFlag is False:
+                print("Phrase " + keyword + " not found in the note.")
         elif file_name == "all":
             for name, note in files.items():
                 self.flag = True

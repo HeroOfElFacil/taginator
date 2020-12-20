@@ -17,7 +17,7 @@ class Helper():
             print("\n\t\'exit\' closes Taginator.\n")
         elif command == "help filter":
             print("\n\t\'filter\' first prompts the user whether they want to filter by tag (notes with exact tag match), by phrase (notes with content containing matching phrase) or by date (notes with content containing matching date fragment/whole date). "
-                  "A list of notes fulfilling the criteria is returned. Furthermore, returned notes can be shown (content + all generated tags), searched for context for a given tag and summarized.\n")
+                  "A list of notes fulfilling the criteria is returned. Furthermore, returned notes can be shown (content + all generated tags), searched for context for a given keyword and summarized.\n")
         elif command == "help help":
             print("\n\tFunny\n")
         elif command == "help summary":
