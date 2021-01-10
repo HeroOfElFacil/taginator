@@ -120,10 +120,11 @@ class Viewer():
             print("\nNotes matching date: \'" + searchFor + "\'\n")
             searchFlag = False
             for name, note in files.items():
-                if date_normalized in note.normalized_dates:
-                    searchFlag = True
-                    dateInText = note.normalized_dates[date_normalized]
-                    self.searchPrint(scope, name, note, files, dateInText, [dateInText])
+                for note_date in note.normalized_dates:
+                    if self.__dates_equals(date_normalized, note_date):
+                        searchFlag = True
+                        dateInText = note.normalized_dates[note_date]
+                        self.searchPrint(scope, name, note, files, dateInText, [dateInText])
             if not searchFlag:
                 print("No notes matching date: \'" + searchFor + "\' found!\n")
 
@@ -132,6 +133,9 @@ class Viewer():
 
         else:
             print("Invalid command")
+
+    def __dates_equals(self, st, nd):
+        return st == nd or st.month == nd.month or st.year == st.month
 
     def filter_notes(self, files, what):
         files = self.sort_by_sortflag(files, self.sortflag)
@@ -177,9 +181,11 @@ class Viewer():
             print("\nNotes matching date: \'" + searchFor + "\'\n")
             searchFlag = False
             for name, note in files.items():
-                if date_normalized in note.normalized_dates:
-                    searchFlag = True
-                    filteredList.append(name)
+                for note_date in note.normalized_dates:
+                    if self.__dates_equals(date_normalized, note_date):
+                        searchFlag = True
+                        filteredList.append(name)
+
             if not searchFlag:
                 print("No notes matching date: \'" + searchFor + "\' found!\n")
 
