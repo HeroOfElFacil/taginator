@@ -1,0 +1,12 @@
+Meeting date 10/01/2021
+12:15 - John Kowalsky presents a proposal to start a new project. Proposal rejected with a vote. Greg even vetoed. :(
+12:30 - Coffee break.
+12:50 - Start of the briefing on the current state of the Random Object Generator project.
+13:00 - Setting the Random Object Generator TODO:
+1 - more objects,
+2 - greater randomness of objects,
+3 - less generation of Christmas tree-like objects.
+13:25 - Tea break.
+13:30 - Schedule dates: preliminary presentation of the Random Object Generator project - 21/02//2022, final solution 21/06/2022
+13:45 - End of the meeting.
+Next meeting 10/02/2021

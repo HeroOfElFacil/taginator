@@ -1,0 +1,1 @@
+Why Kubernetes. Speed and flexibility in creating and installing applications. Facilitating the continuous development, integration and implementation of the application. Resource isolation. Abstraction. Scalability. Cool API for Python. You have to check. TODO: Completion date: 13/12/2021.

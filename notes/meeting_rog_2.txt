@@ -1,0 +1,16 @@
+Meeting date 10/02/2021
+10:00 - Meeting start.
+10:15 - Coffee break.
+10:30 - Start of a briefing on the current state of the Random Object Generator project.
+11:00 - Discussion about abandoning the Random Object Generator project.
+12:55 - Top-down decision to continue the project. Adam said we had to finish it. :(
+13:00 - Setting the Random Object Generator TODO:
+1 - refining the graphic interface,
+2 - less generation of objects resembling Christmas trees !!!
+13:25 - Tea break.
+13:30 - Setting and reminding of current deadlines:
+completion of Random Object Generator TODO - 20/02/2022,
+preliminary presentation of the Random Object Generator project - 21/02/2022,
+final solution 21/06/2022.
+13:45 - Meeting end.
+Next meeting: 02/03/2022
