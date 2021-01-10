@@ -1,7 +1,1 @@
-20.04.2005 - the project has been started. Working name - Intel Center Universal.
-Time 21:37, first organizational meeting, during which roles in the team were established.
-Anne Smith becomes the project chairman.
-Brian Wallace is the second coordinator.
-Trevor Philips is a senior programmer from backend (?).
-John Kowalsky was not assigned.
-TODO
+The project started on 20.04.2005. The working name was established as Intel Center Universal. The first organizational meeting took place on 22.04.2005 at 12:19. The roles in the team were established. Anne Smith became the project leader, Brian Wallace is the second coordinator and Trevor Philips is the senior programmer from backend (?). Unfortunately, John Kowalsky was not assigned. TODO
